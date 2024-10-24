@@ -21,8 +21,8 @@
 const cards = [
   { title: 'Полировка кузова', copy: 'Check out all of these gorgeous mountain trips with beautiful views of, you guessed it, the mountains', button: 'Заказать', image: '1' },
   { title: 'Оклейка авто пленкой', copy: 'Plan your next beach trip with these fabulous destinations', button: 'Заказать', image: '2' },
-  { title: 'Нанесение керамики', copy: 'It\'s the desert you\'ve always dreamed of', button: 'Заказать', image: '3' },
-  { title: 'Тонировка', copy: 'Seriously, straight up, just blast off into outer space today', button: 'Заказать', image: '4' }
+  { title: 'Нанесение керамики', copy: 'It\'s the desert you\'ve always dreamed of', button: 'Заказать', image: '4' },
+  { title: 'Тонировка', copy: 'Seriously, straight up, just blast off into outer space today', button: 'Заказать', image: '3' }
 ];
 
 const cardsContainer = document.getElementById('cardsContainer');

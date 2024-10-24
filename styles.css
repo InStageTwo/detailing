@@ -138,6 +138,160 @@ a {
   width: 100%;
   visibility: hidden;
 }
+.advantages,
+.service{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+.section-title{
+  margin: 20px auto;
+  border-bottom: 1px solid brown;
+}
+
+.advantages{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgb(46, 45, 45);
+  height: auto;
+}
+
+.advantages-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+} 
+.advantages-container{
+  position: relative;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 20px;
+}
+
+.advantage-card {
+  position: relative;
+  height: 250px;
+  background: #fff;
+  display: flex;
+  width: 45%;
+  margin: 30px 0;
+  color: rgb(46, 45, 45);
+
+}
+
+
+.imgBox{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #333;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+}
+
+.imgBox img{
+  max-width: 100px;
+  transition: 0.5s ease-in-out;
+}
+
+.advantage-card:hover .imgBox{
+  width: 150px;
+  height: 150px;
+  left: -75px;
+  top: calc(50% - 75px);
+  transition: 0.5s ease-in-out;
+  background: brown;
+}
+
+.advantage-card:hover .imgBox img{
+  max-width: 75px;
+}
+
+.imgBox::before{
+  content: attr(data-text);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 6em;
+  color: rgba(255, 255, 255, .05);
+  font-weight: 700;
+}
+.advantage-content{
+  position: absolute;
+  right: 0;
+  width: calc(100% - 75px);
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.advantage-content h3{
+  margin-bottom: 5px;
+  font-size: 24px;
+}
+.advantage-content a{
+  display: inline-block;
+  margin-top: 10px;
+  padding: 5px 10px;
+  background: #333;
+  color: #fff;
+}
+
+@media (max-width: 992px){
+  .advantages-container{
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+  .advantage-card{
+    width: 400px;
+  }
+}
+@media (max-width: 768px){
+  
+  .advantage-card{
+    max-width: 300px;
+    flex-direction: column;
+    height: auto;
+  }
+  .imgBox{
+    position: relative;
+  }
+  .imgBox,
+  .advantage-card:hover .imgBox{
+    width: 100%;
+    height: 200px;
+    left: 0;
+  }
+  .imgBox img,
+  .advantage-card:hover .imgBox img{
+    max-width: 100px;
+  }
+  .advantage-content{
+    position: relative;
+    width: 100%;
+  }
+}
+
+
 /* start */
 /* .service{
   display: flex;
@@ -282,6 +436,7 @@ a {
     text-align: center;
     color: whitesmoke;
     background-color: whitesmoke;
+    background-size: cover;
     box-shadow: 0 1px 1px rgba(0,0,0,0.1), 
                 0 2px 2px rgba(0,0,0,0.1), 0 4px 4px rgba(0,0,0,0.1), 0 8px 8px rgba(0,0,0,0.1),
 0 16px 16px rgba(0,0,0,0.1);
