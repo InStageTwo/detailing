@@ -16,6 +16,8 @@
   --e: cubic-bezier(0.19, 1, 0.22, 1);
 }
 
+body, html { width: 100%; height: 100%; }
+
 body{
   min-width: 320px;
   min-height: 100%;
@@ -43,9 +45,9 @@ a {
   display: flex;
   width: 100%;
   justify-content: space-between;
-    align-items: center;
-    margin: 25px;
-    gap: 25px;
+  align-items: center;
+  padding: 25px;
+  gap: 25px;
     
 }
 
@@ -77,23 +79,29 @@ a {
 
 .header-call{
   color: brown;
-    padding: 9px 17px;
-    border: 2px solid brown;
-    background: transparent;
-    cursor: pointer;
-    font-weight: 700;
+  padding: 9px 17px;
+  border: 2px solid brown;
+  background: transparent;
+  cursor: pointer;
+  font-weight: 700;
 }
 
 .header-call:hover{
   color: #fff;
   border: 2px solid brown;
- transition: 0.3 linear;
+  transition: 0.3 linear;
+}
+
+@media (max-width: 725px){
+  .header-right .mail{
+    display: none;
+  }
 }
 
 .main{
   display: flex;
   min-height: 100vh;
-  margin-top: 90px;
+  padding-top: 90px; 
   width: 100%;
   position: relative; 
 }
@@ -110,7 +118,7 @@ a {
 }
 
 .main-text h1 {
-  font-size: 5em;
+  font-size: 60px;
   font-weight: 800;
   color: #fff;
   line-height: 1em;
@@ -136,7 +144,7 @@ a {
   opacity: 0.8;
   height: 100%;
   width: 100%;
-  /* visibility: hidden; */
+  visibility: hidden;
 }
 .advantages,
 .service{
@@ -183,7 +191,7 @@ a {
   width: 45%;
   margin: 30px 0;
   color: rgb(46, 45, 45);
-
+  box-shadow: 1px 1px 2px black, 0 0 1em red, 0 0 0.2em red;
 }
 
 
@@ -243,6 +251,7 @@ a {
   align-items: center;
   overflow: hidden;
 }
+
 .advantage-content h3{
   margin-bottom: 5px;
   font-size: 24px;
@@ -291,35 +300,34 @@ a {
   }
 }
 
-
-/* start */
-/* .service{
+.gallery{
   display: flex;
   height: 100vh;
   background: #fff;
-  width: clamp(600px, 100%, 1800px );
+  width: 100%;
   padding: 60px 30px;
   flex-direction: column;
   text-align: center;
   margin: 0 auto 40px;
   align-items: center;
-  color: brown;
+  color: rgb(46, 45, 45);
 }
 
   
 
-.service h2{
+.gallery h2{
   margin: 0 auto 25px;
+  border-bottom: 1px brown solid;
 }
 
-.service-container {
+.gallery-container {
   position: relative;
   width: 100%;
   height: 100%;
-  border: 2px solid white;
+  overflow: hidden;
 }
 
-.service-cards {
+.gallery-cards {
   width: 100%;
   height: 100%;
   display: grid;
@@ -329,10 +337,11 @@ a {
    
 }
 
-.service-card {
+.gallery-card {
   width: 100%;
   height: 100%;
 }
+
 
 .image {
   position: absolute;
@@ -344,12 +353,13 @@ a {
   background-repeat: no-repeat;
 }
 
-.service-container .before {
+.gallery-container .before {
   background-image: url('assets/img/interior-before.jpeg');
 }
-.service-container .after {
+.gallery-container .after {
   background-image: url('assets/img/interior-after.jpeg');
   width: 50%;
+  
 }
 
 .slider {
@@ -368,28 +378,18 @@ a {
   z-index: 10;
   opacity: 0;
   
-} */
+}
 
- /* end */
-
-/* .slider:hover {
+.slider:hover {
   background: rgba(242, 242, 241, 0.1); 
-} */
-/* .slider::-webkit-slider-thumb{
-  -webkit-appearance: none;
-  appearance: none;
-  width: 3px;
-  height: 246px;
-  background: #e7e1e1;
-  cursor: pointer;
-} */
+} 
 
-/* .slider-line {
+.slider-line {
   position: absolute;
   inset: 0;
   width: .2rem;
   height: 100%;
-  background: rgb(46, 45, 45);
+  background: #fff;
   z-index: 20;
   left: 50%;
   transform: translateX(-50%);
@@ -402,7 +402,7 @@ a {
   .service-cards {
     grid-template-columns: repeat(2, 1fr);     
   }
-} */
+}
 
 .service-container{
   display: flex;

@@ -1,20 +1,20 @@
 
-// document.addEventListener("DOMContentLoaded", function() {
-//   const containers = document.querySelectorAll('.service-container');
+document.addEventListener("DOMContentLoaded", function() {
+  const containers = document.querySelectorAll('.gallery-container');
  
-//   containers.forEach((container) => {
-//   const slider = container.querySelector('.slider');
-//   const image = container.querySelector('.image.after');
-//   const sliderLine = container.querySelector('.slider-line');
+  containers.forEach((container) => {
+  const slider = container.querySelector('.slider');
+  const image = container.querySelector('.image.after');
+  const sliderLine = container.querySelector('.slider-line');
  
-//     if (slider && image && sliderLine) {
-//       slider.addEventListener('input', (e) => {
-//         image.style.width = `${e.target.value}%`;
-//         sliderLine.style.left = `${e.target.value}%`;
-//       });
-//     }
-//   });
-// });
+    if (slider && image && sliderLine) {
+      slider.addEventListener('input', (e) => {
+        image.style.width = `${e.target.value}%`;
+        sliderLine.style.left = `${e.target.value}%`;
+      });
+    }
+  });
+});
 
 
 
@@ -54,3 +54,4 @@ cards.forEach((card, index) => {
   cardElement.appendChild(contentElement);
   cardsContainer.appendChild(cardElement);
 });
+
