@@ -98,10 +98,16 @@ a {
   }
 }
 
+@media (max-width: 540px){
+  .header-right .phone {
+    display: none;
+  }
+}
+
 .main{
   display: flex;
   min-height: 100vh;
-  padding-top: 90px; 
+  /* padding-top: 90px;  */
   width: 100%;
   position: relative; 
 }
@@ -163,8 +169,9 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: rgb(46, 45, 45);
+  background: #e2dcdc;
   height: auto;
+  color: rgb(46, 45, 45);;
 }
 
 .advantages-text{
@@ -191,7 +198,7 @@ a {
   width: 45%;
   margin: 30px 0;
   color: rgb(46, 45, 45);
-  box-shadow: 1px 1px 2px black, 0 0 1em red, 0 0 0.2em red;
+  box-shadow: 1px 1px 2px black, 0 0 1em #333, 0 0 0.2em red;
 }
 
 
